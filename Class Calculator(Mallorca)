@@ -1,0 +1,43 @@
+class calculator
+{
+  int addTwonumber(int x, int y )
+  {
+    return x + y;
+  }
+  
+  int divTwonumbers(int x, int y)
+  {
+    if (y==0){
+      throw Exception('Cannot divide by zero');
+    }
+    return x ~/ y;
+  }
+  
+  int multiplyTwonumbers(int x, int y)
+  {
+    return x * y;
+  }
+  
+  int subTwonumbers(int x, int y)
+  {
+    return x-y;
+  }
+  void runCalculator(int num1, int num2) 
+  {
+    calculator calc = calculator();
+    
+    int sum = calc.addTwonumber (num1, num2);
+    int multiply = calc.multiplyTwonumbers( num1, num2);
+    int div = calc.divTwonumbers(num1, num2);
+    int minus = calc.subTwonumbers(num1, num2);
+    
+    print ('The sum is $sum');
+    print ('The product is $multiply ');
+    print ('The qoutient is $div');
+    print ('The difference is $minus');
+  }
+}
+
+void main(){
+  calculator().runCalculator(89,7);
+}
